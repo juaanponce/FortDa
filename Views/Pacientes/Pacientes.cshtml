@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Pacientes";
+}
+
+<div class="listaPacientes">
+    <h1 class="lista-pacientes">Listado de Pacientes</h1>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Agregar Nuevo Paciente</h2>
+        <form method="post" asp-action="AgregarPaciente">
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Nombre y Apellido</label>
+                    <input type="text" name="Nombre" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label class="form-label">Edad</label>
+                    <input type="number" name="Edad" class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">DNI</label>
+                    <input type="number" name="Dni" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label class="form-label">Contacto</label>
+                    <input type="text" name="Contacto" class="form-control" required>
+                </div>
+            </div>
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-primary" id="liveAlertBtn">Agregar nuevo paciente</button>
+        </form>
+    </div>
+
+    @if (TempData["MensajeExito"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            @TempData["MensajeExito"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+
+
+    <div class="alert alert-info">
+        <p>Mira tu lista de pacientes con sus respectivas informaciones personales!</p>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-pink">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>DNI</th>
+                <th>Contacto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>7</td>
+                <td>30123456</td>
+                <td>1164738411</td>
+            </tr>
+            <tr>
+                <td>Mateo Gomez</td>
+                <td>11</td>
+                <td>35111222</td>
+                <td>1177399198</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

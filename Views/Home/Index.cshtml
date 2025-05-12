@@ -2,28 +2,29 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="bg-light text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Bienvenido a FortDa</h1>
-        <p class="lead">Centro de Acompañamiento Terapéutico</p>
-        <p>En FortDa trabajamos con profesionales dedicados a brindar contención, escucha activa y orientación para diferentes necesidades emocionales y médicas.</p>
-        <a class="btn btn-primary mt-3" asp-controller="Home" asp-action="Formulario">Descubrí tu acompañamiento</a>
-    </div>
+<div class="texto-principal">
+    <h1 class="display-4">FortDa - Centro Terapeutico</h1>
+    <p>Administra tu centro terapeutico!</p>
 </div>
 
-<section class="container py-5">
-    <div class="row text-center">
-        <div class="col-md-4">
-            <h3>Atención Psicológica</h3>
-            <p>Sesiones individuales y personalizadas para adultos, adolescentes y niños.</p>
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://fort-da.com.ar/wp-content/uploads/2013/11/Diseno-sin-titulo-2-1024x773.png" class="d-block w-100" alt="niño jugando">
         </div>
-        <div class="col-md-4">
-            <h3>Acompañamiento Escolar</h3>
-            <p>Intervenciones para dificultades de aprendizaje, conducta o integración.</p>
+        <div class="carousel-item">
+            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://fort-da.com.ar/wp-content/uploads/2013/11/Mindfulness.-1-1024x773.png" class="d-block w-100" alt="terapia">
         </div>
-        <div class="col-md-4">
-            <h3>Asistencia Psiquiátrica</h3>
-            <p>Evaluaciones clínicas, seguimiento y orientación profesional.</p>
+        <div class="carousel-item">
+            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://fort-da.com.ar/wp-content/uploads/2024/05/Diseno-sin-titulo-2-1-1024x744.png" class="d-block w-100" alt="medico">
         </div>
     </div>
-</section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
